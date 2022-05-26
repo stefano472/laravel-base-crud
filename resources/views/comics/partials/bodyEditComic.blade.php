@@ -13,47 +13,52 @@
             </a>
         </div>
         <div class="form">
-            <form class="edit" action="{{route('comics.store')}}" method="post">
+            <form class="edit" action="{{route('comics.update', $comic->id)}}" method="POST">
                 @csrf
+
+                @method('PUT')
 
                 <div class="input">
                     <label for="title">Title:</label>
-                    <input type="text" name="title">
+                    <input type="text" name="title" value="{{ $comic->title }}">
                 </div>
                 <div class="input">
                     <label for="description">Description</label>
-                    <textarea name="description"></textarea>
+                    <textarea name="description">{{ $comic->description }}</textarea>
                 </div>
                 <div class="input">
                     <label for="thumb">Image URL:</label>
-                    <input type="text" name="thumb">
+                    <input type="text" name="thumb" value="{{ $comic->thumb }}">
                 </div>
                 <div class="input">
                     <label for="price">U.S. Price:</label>
-                    <input type="text" name="price">
+                    <input type="text" name="price" value="{{ $comic->price }}">
                 </div>
                 <div class="input">
                     <label for="series">Series:</label>
-                    <input type="text" name="series">
+                    <input type="text" name="series" value="{{ $comic->series }}">
                 </div>
                 <div class="input">
                     <label for="sale_date">On Sale Date:</label>
-                    <input type="text" name="sale_date">
+                    <input type="text" name="sale_date" value="{{ $comic->sale_date }}">
                 </div>
                 <div class="input">
                     <label for="type">Type:</label>
-                    <input type="text" name="type">
+                    <input type="text" name="type" value="{{ $comic->type }}">
                 </div>
 
 
 
-                <button type="submit">CREATE</button>
+                <button type="submit">UPDATE</button>
             </form>
+            {{-- <form class="delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+
+                @method('DELETE')
+
+                <button type="submit">DELETE</button>
+            </form> --}}
         </div>
-        {{-- <div class="more">
-            <a href="{{ route('comics.index') }}">
-              <button type="button">HOMEPAGE</button>
-            </a>
-        </div> --}}
+
     </div>
   </main>

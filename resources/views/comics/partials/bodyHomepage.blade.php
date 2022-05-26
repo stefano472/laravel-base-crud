@@ -11,7 +11,7 @@
           @foreach ($comics as $index => $comic)
             <div class="card">
                 <a href="{{ route('comics.show', $comic->id) }}">
-                  {{-- @if (getimagesize({{$comic->thumb}})) --}}
+                  {{-- @if (url_exists($comic->thumb)) --}}
                     <img src="{{ $comic->thumb }}" alt="card">
                   {{-- @else
                     <img src="{{ asset('img/img_not_found.png') }}" alt="card">

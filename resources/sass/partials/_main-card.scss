@@ -87,15 +87,37 @@ main.card-focus {
     .more-infos {
       box-shadow: 0 -1px 0 0 #d3d3d3;
       background-color: #f6f6f6;
-      .talent,
+      .container {
+        justify-content: space-between;
+      }
       .specs {
         flex-basis: calc(50% - 1rem);
       }
-      .talent a::after {
-        content: ", ";
-      }
-      .talent a:last-of-type::after{
-        display: none;
+      .edit {
+        align-self: center;
+        display: flex;
+        gap: 1rem;
+        a {
+          text-decoration: none;
+        }
+        button {
+          border: none;
+          border-radius: 1px;
+          color: white;
+          font-size: 0.8rem;
+          font-weight: 700;
+          padding:  0.5rem 1.5rem;
+          background: #0282f9;
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+              box-shadow: inset 0px 0px 0 2px #155591;
+              border-radius: 5px;
+          }
+          &.delete{
+            background: #bd6464;
+          }
+        }
       }
       h3 {
         padding: 0 0 1.5rem;

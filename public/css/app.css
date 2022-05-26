@@ -158,12 +158,13 @@ main.homepage .more {
 }
 
 main.homepage .more button {
+  width: 100%;
   border: none;
   border-radius: 1px;
   color: white;
   font-size: 0.8rem;
   font-weight: 700;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem;
   background: #0282f9;
   transition: 0.3s;
   cursor: pointer;
@@ -281,17 +282,43 @@ main.card-focus .more-infos {
   background-color: #f6f6f6;
 }
 
-main.card-focus .more-infos .talent,
+main.card-focus .more-infos .container {
+  justify-content: space-between;
+}
+
 main.card-focus .more-infos .specs {
   flex-basis: calc(50% - 1rem);
 }
 
-main.card-focus .more-infos .talent a::after {
-  content: ", ";
+main.card-focus .more-infos .edit {
+  align-self: center;
+  display: flex;
+  gap: 1rem;
 }
 
-main.card-focus .more-infos .talent a:last-of-type::after {
-  display: none;
+main.card-focus .more-infos .edit a {
+  text-decoration: none;
+}
+
+main.card-focus .more-infos .edit button {
+  border: none;
+  border-radius: 1px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  background: #0282f9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+main.card-focus .more-infos .edit button:hover {
+  box-shadow: inset 0px 0px 0 2px #155591;
+  border-radius: 5px;
+}
+
+main.card-focus .more-infos .edit button.delete {
+  background: #bd6464;
 }
 
 main.card-focus .more-infos h3 {
@@ -355,7 +382,7 @@ main.create-comic .form {
   padding: 1rem 0 2rem;
 }
 
-main.create-comic .form form {
+main.create-comic .form form.edit {
   padding: 1rem;
   border-radius: 5px;
   border: 2px solid #0282f9;
@@ -366,17 +393,18 @@ main.create-comic .form form {
   gap: 0.5rem;
 }
 
-main.create-comic .form form .input {
+main.create-comic .form form.edit .input {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-main.create-comic .form form .input input {
+main.create-comic .form form.edit .input input,
+main.create-comic .form form.edit .input textarea {
   padding: 0.35rem;
 }
 
-main.create-comic .form form button {
+main.create-comic .form form.edit button {
   margin-top: 0.5rem;
   align-self: end;
   border-radius: 5px;

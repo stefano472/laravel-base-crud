@@ -36,28 +36,6 @@
     </div>
     <div class="more-infos">
       <div class="container">
-        {{-- <div class="talent">
-          <h3>Talent</h3>
-          <div class="info">
-            <h5>Art by:</h5>
-            <p>
-              @foreach ($card['artists'] as $artist)
-                <a href="#">
-                  {{ $artist }} 
-                </a>
-              @endforeach
-          </div>
-          <div class="info">
-            <h5>Written by:</h5>
-            <p>
-              @foreach ($card['writers'] as $writer)
-                <a href="#">
-                  {{ $writer }} 
-                </a>
-              @endforeach
-            </p>
-          </div>
-        </div> --}}
         <div class="specs">
           <h3>Specs</h3>
           <div class="info">
@@ -76,6 +54,21 @@
             <h5>On Sale Date:</h5>
             <p>{{ $comic->sale_date }}</p>
           </div>
+        </div>
+        <div class="edit">
+          <a href="{{ route('comics.index') }}">
+            <button type="button">HOMEPAGE</button>
+          </a>
+          <a href="{{ route('comics.edit', $comic->id) }}">
+            <button type="button">EDIT COMIC</button>
+          </a>
+          <form class="delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+            @csrf
+
+            @method('DELETE')
+
+            <button class="delete" type="submit">DELETE</button>
+          </form>
         </div>
       </div>
     </div>
