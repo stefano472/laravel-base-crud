@@ -55,31 +55,34 @@ main.card-focus {
       gap: 0.5rem;
       align-items: flex-end;
     }
-    .green-banner {
-      display: flex;
-      color: white;
-      font-size: 0.9rem;
-      margin: 1rem auto;
-      // padding: 0.5rem 1rem;
-      background-color: #55ba59;
-      .status {
+    .description {
+      flex-grow: 1;
+      .green-banner {
         display: flex;
-        justify-content: space-between;
-        box-shadow: 1px 0 0 0 #acf488;
-        padding: 0.5rem 1rem;
-        flex-grow: 1;
-        span,
-        div {
-          color: #acf488;
+        color: white;
+        font-size: 0.9rem;
+        margin: 1rem auto;
+        // padding: 0.5rem 1rem;
+        background-color: #55ba59;
+        .status {
+          display: flex;
+          justify-content: space-between;
+          box-shadow: 1px 0 0 0 #acf488;
+          padding: 0.5rem 1rem;
+          flex-grow: 1;
+          span,
+          div {
+            color: #acf488;
+          }
+        }
+        .check-status {
+          padding: 0.5rem 1rem;
         }
       }
-      .check-status {
-        padding: 0.5rem 1rem;
+      p.text-description {
+        font-size: 0.9rem;
+        color:  #555554;
       }
-    }
-    p.description {
-      font-size: 0.9rem;
-      color:  #555554;
     }
     .more-infos {
       box-shadow: 0 -1px 0 0 #d3d3d3;

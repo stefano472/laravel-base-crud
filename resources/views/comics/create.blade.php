@@ -1,11 +1,12 @@
+
 @extends('comics.layout.mainLayout')
 
 @section('title')
-    DC | Comic Focus
+    DC | Create New Comic
 @endsection
 
 @section('main')
-
-    @include('comics.partials.bodyComicFocus')
+    
+    @include('comics.partials.bodyCreateNewComic')
     
 @endsection
