@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="container">
           <div class="active-series">
-            CREATE A NEW COMIC
+            UPDATE COMIC
           </div>
         </div>
     </div>
