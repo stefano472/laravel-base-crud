@@ -3,7 +3,8 @@
     <div class="container">
       <div class="header-logo">
         <a href="/">
-          <img src="/img/dc-logo.png" alt="logo">
+          <img src="/../../img/dc-logo.png" alt="logo">
+          {{-- C:\Users\stefa\Desktop\Stefen\boolean\php\laravel-base-crud\resources\img\dc-logo.png --}}
         </a>
       </div>
       <nav>

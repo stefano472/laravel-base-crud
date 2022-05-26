@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+
+    // faccio il redirect dell'uri sulla mia homepage
+    return redirect()->route('comics.index');
 });
 
 // Route::get('/', function () {

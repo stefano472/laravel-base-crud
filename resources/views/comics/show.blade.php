@@ -1,4 +1,4 @@
-@extends('layout.mainLayout')
+@extends('comics.layout.mainLayout')
 
 @section('title')
     DC | Card Focus
@@ -6,6 +6,6 @@
 
 @section('main')
 
-    @include('partials.bodyCardFocus')
+    @include('comics.partials.bodyCardFocus')
     
 @endsection

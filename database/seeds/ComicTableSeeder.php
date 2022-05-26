@@ -17,13 +17,20 @@ class ComicTableSeeder extends Seeder
         foreach($comics as $comic) {
             $newComic = new Comic();
 
-            $newComic->title = $comic['title'];
-            $newComic->description = $comic['description'];
-            $newComic->thumb = $comic['thumb'];
-            $newComic->price = $comic['price'];
-            $newComic->series = $comic['series'];
-            $newComic->sale_date = $comic['sale_date'];
-            $newComic->type = $comic['type'];
+            
+            // $newComic->title = $comic['title'];
+            // $newComic->description = $comic['description'];
+            // $newComic->thumb = $comic['thumb'];
+            // $newComic->price = $comic['price'];
+            // $newComic->series = $comic['series'];
+            // $newComic->sale_date = $comic['sale_date'];
+            // $newComic->type = $comic['type'];
+            
+            // se metto protected $fillable in class Comic posso per convenzione,
+            // siccome i dati della tabellla e quelli del nostro array hanno 
+            // la stessa chiave, utilizzare la versione abbreviata
+            
+            $newComic->fill($comic);
 
             $newComic->save();
         }
