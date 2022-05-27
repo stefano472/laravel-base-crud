@@ -62,13 +62,23 @@
           <a href="{{ route('comics.edit', $comic->id) }}">
             <button type="button">EDIT COMIC</button>
           </a>
-          <form class="delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-            @csrf
 
-            @method('DELETE')
+          <button id='open-modal' class="delete-btn" type="button">DELETE</button>
 
-            <button class="delete" type="submit">DELETE</button>
-          </form>
+          <div id="modal-container">
+            <div class="modal">
+              <h2>Are you 100% sure????</h2>
+              <p>Pay Attention!!!! once you delete this comic you can't come back...</p>
+              <form class="delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+    
+                @method('DELETE')
+    
+                <button class="delete-btn" type="submit">YES</button>
+                <button id='close-modal' type="button">NO</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

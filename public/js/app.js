@@ -19380,6 +19380,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19411,6 +19413,26 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+console.log('JS OK');
+var open_modal = document.getElementById('open-modal');
+var modal_container = document.getElementById('modal-container');
+var close_modal = document.getElementById('close-modal');
+open_modal.addEventListener('click', function () {
+  return modal_container.classList.add('show');
+});
+close_modal.addEventListener('click', function () {
+  return modal_container.classList.remove('show');
+});
 
 /***/ }),
 

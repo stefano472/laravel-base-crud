@@ -10,8 +10,8 @@
         <div class="more">
             <a href="{{ route('comics.show', $comic->id ) }}">
                 <button type="button">ANNULLA</button>
-                <a href="{{ route('comics.index') }}">
             </a>
+            <a href="{{ route('comics.index') }}">
                 <button type="button">HOMEPAGE</button>
             </a>
         </div>

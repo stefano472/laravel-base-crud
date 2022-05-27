@@ -92,6 +92,27 @@ main.card-focus {
       }
       .specs {
         flex-basis: calc(50% - 1rem);
+        h3 {
+          padding: 0 0 1.5rem;
+          box-shadow: 0 1px 0 0 #d3d3d3;
+        }
+        .info {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0.5rem 0;
+          box-shadow: 0 1px 0 0 #d3d3d3;
+          h5 {
+            flex-basis: 30% ;
+          }
+          p {
+            flex-basis: 70%;
+            font-size: 0.8rem;
+            a {
+              color: #0282f9;
+              text-decoration: none;
+            }
+          }
+        }
       }
       .edit {
         align-self: center;
@@ -114,29 +135,46 @@ main.card-focus {
               box-shadow: inset 0px 0px 0 2px #155591;
               border-radius: 5px;
           }
-          &.delete{
+          &.delete-btn{
             background: #bd6464;
           }
         }
-      }
-      h3 {
-        padding: 0 0 1.5rem;
-        box-shadow: 0 1px 0 0 #d3d3d3;
-      }
-      .info {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0.5rem 0;
-        box-shadow: 0 1px 0 0 #d3d3d3;
-        h5 {
-          flex-basis: 30% ;
-        }
-        p {
-          flex-basis: 70%;
-          font-size: 0.8rem;
-          a {
-            color: #0282f9;
-            text-decoration: none;
+        #modal-container {
+          background: rgba($color: #000000, $alpha: 0.5);
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          display: grid;
+          place-content: center;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          &.show {
+            pointer-events: auto;
+            opacity: 1;
+          }
+          .modal {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            width: min(400px, 100%);
+            box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+            text-align: center;
+            p {
+              font-size: 0.9rem;
+              opacity: 0.7;
+              margin: 1rem auto;
+            }
+            form {
+              display: flex;
+              justify-content: center;
+              gap: 2rem;
+              button {
+                border-radius: 5px;
+              }
+            }
           }
         }
       }
