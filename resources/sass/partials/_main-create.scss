@@ -22,6 +22,12 @@ main.create-comic {
     .more {
         padding: 1rem 0;
         text-align: end;
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+        a {
+            text-decoration: none;
+        }
     }
     .form {
         gap: 0.8rem;

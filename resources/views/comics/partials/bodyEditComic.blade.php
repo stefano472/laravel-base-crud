@@ -8,8 +8,11 @@
     </div>
     <div class="container">
         <div class="more">
-            <a href="{{ route('comics.index') }}">
-              <button type="button">HOMEPAGE</button>
+            <a href="{{ route('comics.show', $comic->id ) }}">
+                <button type="button">ANNULLA</button>
+                <a href="{{ route('comics.index') }}">
+            </a>
+                <button type="button">HOMEPAGE</button>
             </a>
         </div>
         <div class="form">
@@ -40,24 +43,15 @@
                 </div>
                 <div class="input">
                     <label for="sale_date">On Sale Date:</label>
-                    <input type="text" name="sale_date" value="{{ $comic->sale_date }}">
+                    <input type="date" name="sale_date" value="{{ $comic->sale_date }}">
                 </div>
                 <div class="input">
                     <label for="type">Type:</label>
                     <input type="text" name="type" value="{{ $comic->type }}">
                 </div>
 
-
-
                 <button type="submit">UPDATE</button>
             </form>
-            {{-- <form class="delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-                @csrf
-
-                @method('DELETE')
-
-                <button type="submit">DELETE</button>
-            </form> --}}
         </div>
 
     </div>

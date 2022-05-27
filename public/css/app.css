@@ -82,7 +82,9 @@ main.homepage .hero .active-series {
 main.homepage .contents {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  row-gap: 1.5rem;
   padding: 1.5rem 0;
 }
 
@@ -375,6 +377,13 @@ main.create-comic .hero .active-series {
 main.create-comic .more {
   padding: 1rem 0;
   text-align: end;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+main.create-comic .more a {
+  text-decoration: none;
 }
 
 main.create-comic .form {
