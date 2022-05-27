@@ -23,7 +23,7 @@ main.homepage {
         flex-wrap: wrap;
         column-gap: 0.8rem;
         row-gap: 1.5rem;
-        padding: 1.5rem 0;
+        padding: 2.5rem 0 1.5rem;
         .card {
             padding: 0.3rem;
             border-radius: 2px;
@@ -81,10 +81,10 @@ main.homepage {
         }
     }
     .more {
-      padding: 1rem 0;
+      padding: 1rem 0 1.5rem;
       text-align: center;
       button {
-        width: 100%;
+        width: 75%;
         border: none;
         border-radius: 1px;
         color: white;

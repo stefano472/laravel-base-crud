@@ -83,3 +83,4 @@
       </div>
     </div>
   </main>
+  <script defer src="/js/app.js"></script>
